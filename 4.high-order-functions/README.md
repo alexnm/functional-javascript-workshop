@@ -21,7 +21,7 @@ const strings = [ "0", "1", "2", "3", "4" ];
 const numbers = strings.map( parseInt );
 ```
 
-*Questions*
+**Questions**
 * Should we worry about creating too many functions in our code?
 * What is the fundamental difference between map and forEach?
 * Are the native map, filter, reduce functions from JS closer to OOP or FP?
