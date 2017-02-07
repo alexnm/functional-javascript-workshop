@@ -21,6 +21,6 @@ are called *Higher Order Functions*.
 
 **Questions**
 * What is a recursive function?
-* What does it mean to call a function?
+* What does it mean to call a function? How many ways do you know?
 * Can any operation be represented as a function?
 * What is the scope of a function?
