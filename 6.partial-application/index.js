@@ -5,7 +5,7 @@ function leftApplication( f, ...fixedArgs ) {
 }
 
 const map = ( fn, array ) => array.map( fn );
-const get = ( key ) => ( obj ) => obj[ key ];
+const pluck = ( key ) => ( obj ) => obj[ key ];
 
 const objects = [
     { id: 1, name: "Mai am" },
@@ -15,11 +15,11 @@ const objects = [
     { id: 5, name: "scriitor" },
 ]
 
-const getId = leftApplication( map, get( "id" ) );
-const getName = leftApplication( map, get( "name" ) );
+const pluckId = leftApplication( map, pluck( "id" ) );
+const pluckName = leftApplication( map, pluck( "name" ) );
 
-console.log( getId( objects ) );
-console.log( getName( objects ) );
+console.log( pluckId( objects ) );
+console.log( pluckName( objects ) );
 
 
 // 1. Starting from the left application example, write the right application function
