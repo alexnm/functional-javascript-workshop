@@ -23,3 +23,4 @@ are called *Higher Order Functions*.
 * What is a recursive function?
 * What does it mean to call a function?
 * Can any operation be represented as a function?
+* What is the scope of a function?
