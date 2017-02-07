@@ -18,3 +18,8 @@ Functions that:
 * return functions
 
 are called *Higher Order Functions*.
+
+**Questions**
+* What is a recursive function?
+* What does it mean to call a function?
+* Can any operation be represented as a function?
