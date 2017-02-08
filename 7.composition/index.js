@@ -15,7 +15,10 @@ console.log( doubleIncrementAndSquare( 1 ) );
 
 // 1. Write the PIPE function
 
-
+const pipe = ( fn, ...rest ) =>
+    rest.length === 0 ?
+        fn :
+        ( x ) => pipe( ...rest )(fn( x ) );
 
 
 // 2. Compose/Pipe map and filter in order to create a function that extracts the odd ids from the array of objects
@@ -31,12 +34,17 @@ const objects = [
 const odd = id => id % 2 === 1;
 const pluckId = obj => obj.id;
 
+const map = ( fn ) => ( array ) => array.map( fn );
+const filter = ( fn ) => ( array ) => array.filter( fn );
 
-
-
+const extractOdds = pipe(
+    map( pluckId ),
+    filter( odd )
+)
 
 // 3. (BONUS) Starting from the compose example above, write a compose function using reduce
 
-
+const composeWithReduce = ( ...fns ) => ( value ) =>
+    fns.reverse().reduce( ( acc, fn ) => fn( acc ), value );
 
 

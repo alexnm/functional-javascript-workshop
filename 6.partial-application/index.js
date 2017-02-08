@@ -24,13 +24,16 @@ console.log( pluckName( objects ) );
 
 // 1. Starting from the left application example, write the right application function
 
-
-
-
+function rightApplication( f, ...fixedArgs ) {
+    return function( ...restArgs ) {
+        return f( ...restArgs,  ...fixedArgs )
+    }
+}
 
 // 2. Using the right application function, write the code that applies the array and accepts any transformation on the array
 // HINT: You'll reverse engineer the array map function
 
+const mappedArray = rightApplication( map, objects );
 
-
-
+console.log( mappedArray( pluck( "id" ) ) )
+console.log( mappedArray( pluck( "name" ) ) )

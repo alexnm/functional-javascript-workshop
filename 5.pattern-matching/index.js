@@ -9,5 +9,4 @@ console.log( cdr( oneToFive ) );
 
 // Extract the 3rd element in the list using car and cdr
 
-
-
+console.log( car( cdr( cdr( oneToFive ) ) ) )
